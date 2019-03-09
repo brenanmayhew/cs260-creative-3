@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<link rel="stylesheet" href="/css/styles.css">
+		<title>Mars Pictures</title>
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	</head>
+
+	<body>
+		<!-- Our Bootstrap menu: -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+			<a class="navbar-brand" href="/index.html">Powered by NASA</a>
+		</nav>
+
+		<!-- Main Content -->
+    <div id="welcome">
+      <p id="mainTitle">Welcome!</p>
+      <p>Please pick a date to see some amazing pictures!</p>
+      <p>Keep in mind that on occasions NASA may take up to 24 hours to upload a picture!</p>
+      <form name="apod" onsubmit="getAPOD(event)">
+        Date: <input type="text" name="date" id="date">
+        <input type="submit" name="submit" value="Search" />
+      </form>
+      <div id="apodResult"></div>
+    </div>
+
+		<!-- Footer -->
+		<footer class="footer">
+			<a class="link" href="https://github.com/brenanmayhew/cs260-creative-2" target="_blank"> - - - Our Private Github for Creative Lab 2 - - - </a>
+		</footer>
+
+		<!-- Optional Bootstrap's JavaScript -->
+		<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+		<!-- Bootstrap Date-Picker Plugin -->
+		<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
+		<!-- Our JavaScript -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+		<script text="type/javascript" src="/script.js"></script>
+	</body>
+</html>

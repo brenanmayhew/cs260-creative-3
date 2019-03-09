@@ -1,0 +1,49 @@
+html {
+  background-color: #202020;
+}
+
+/* -----Brand----- for all .html files */
+html body nav a.navbar-brand {
+  font-family: sans-serif, 'Arial Narrow', Arial;
+  color: mediumpurple !important;
+  font-size: 2em;
+  font-weight: 400;
+  text-shadow: 2px 2px 1.5px black !important;
+}
+
+/*Main Content*/
+#welcome {
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  color: mediumpurple !important;
+  font-size: 1.3em !important;
+  font-weight: 400;
+  text-shadow: 4.5px 4.5px 3px black;
+  padding-top: 100px;
+  text-align: center;
+  height: 100%;
+  width: 100%;
+  background-color: #202020;
+}
+
+#mainTitle {
+  font-size: 2em !important;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #202020;
+  text-align: center;
+  font-family: sans-serif, 'Arial Narrow', Arial;
+  font-size: 1.5em;
+  font-weight: 300;
+  opacity: .90;
+}
+
+html body footer a.link {
+  color: black !important;
+  font-weight: 500;
+  text-shadow: 1px 0.5px 0.1px black;
+}
