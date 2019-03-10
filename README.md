@@ -19,9 +19,9 @@ We will grade your projects based on:
 
 TAs will assign scores in these ranges:
 
--[ ] 90-100: Excellent use of Vue, clearly follows web design principles
--[ ] 80-90: Uses Vue, good effort was made, but needs work to more clearly present the data or follow web design principles
--[ ] 70-80: Fulfills the minimum requirement of using Vue, but does not make a strong effort to use it well or follow web design principles
+- [ ] 90-100: Excellent use of Vue, clearly follows web design principles
+- [ ] 80-90: Uses Vue, good effort was made, but needs work to more clearly present the data or follow web design principles
+- [ ] 70-80: Fulfills the minimum requirement of using Vue, but does not make a strong effort to use it well or follow web design principles
 
 ## Submission
 On Canvas, submit the URL for your website, which should be running on your DigitalOcean server. 
