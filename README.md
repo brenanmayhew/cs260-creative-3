@@ -26,7 +26,7 @@ TAs will assign scores in these ranges:
 ## Submission
 On Canvas, submit the URL for your website, which should be running on your DigitalOcean server. 
 You will also be assigned 5 peer reviews in Canvas, after all the assignments are turned in. We will do these in class and also have demos.
-Fill in this spreadsheet(https://docs.google.com/spreadsheets/d/1YpRvH66reViytmROV1yNu5aXoV5MaoqWBEz9xwkIaxE/edit#gid=1892165156). Links to an external site...
+Fill in this [spreadsheet](https://docs.google.com/spreadsheets/d/1YpRvH66reViytmROV1yNu5aXoV5MaoqWBEz9xwkIaxE/edit#gid=1892165156). Links to an external site...
 
 ## How to modify this file succesfully
 This README was built using [Basic writing and formatting syntax in GitHub](https://help.github.com/articles/basic-writing-and-formatting-syntax/#links).
