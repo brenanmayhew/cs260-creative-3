@@ -18,16 +18,34 @@
       <p id="mainTitle">Welcome!</p>
       <p>Please pick a date to see some amazing pictures!</p>
       <p>Keep in mind that on occasions NASA may take up to 24 hours to upload a picture!</p>
-      <form name="apod" onsubmit="getAPOD(event)">
-        Date: <input type="text" name="date" id="date">
-        <input type="submit" name="submit" value="Search" />
-      </form>
+      <form v-on:submit.prevent="getAPOD">
+				<my-date-picker v-model="date"></my-date-picker>
+				<button type="submit">Submit</button>
+			</form>
       <div id="apodResult"></div>
+
+      <div v-if="showAddComment" id="comments">
+	      <h3>Add a Comment</h3>
+				<form v-on:submit.prevent="addComment">
+					<input v-model="addedName" placeholder="Name"></input>
+					<textarea v-model="addedComment"></textarea>
+					<br />
+					<button type="submit">Comment</button>
+				</form>
+				<div v-if="comments[dateNum]">
+					<h3>Comments</h3>
+					<div v-for="comment in comments[dateNum]">
+						<hr>
+						<p>{{comment.text}}</p>
+						<p><i>-- {{comment.author}} {{comment.datetime}}</i></p>
+					</div>
+				</div>
+			</div>
     </div>
 
 		<!-- Footer -->
 		<footer class="footer">
-			<a class="link" href="https://github.com/brenanmayhew/cs260-creative-2" target="_blank"> - - - Our Private Github for Creative Lab 2 - - - </a>
+			<a class="link" href="https://github.com/brenanmayhew/cs260-creative-3" target="_blank"> - - - Our Private Github for Creative Lab 3 - - - </a>
 		</footer>
 
 		<!-- Optional Bootstrap's JavaScript -->
@@ -37,6 +55,8 @@
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css" />
 		<!-- Our JavaScript -->
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js" integrity="sha256-4iQZ6BVL4qNKlQ27TExEhBN1HFPvAvAMbFavKKosSWQ=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/vue@2.6.2/dist/vue.js"></script>
+  	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 		<script text="type/javascript" src="/script.js"></script>
 	</body>
 </html>
