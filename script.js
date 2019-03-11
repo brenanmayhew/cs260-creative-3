@@ -1,14 +1,3 @@
-/*
-$(document).ready(function(){
-  $('input[name="date"]').datepicker({
-		format: 'mm/dd/yyyy', 
-		todayHighlight: true, 
-		autoclose: true, 
-		endDate: new Date(), 
-	});
-})
-*/
-
 Vue.component('my-date-picker',{
     template: '<input type="text" v-datepicker class="datepicker" :value="value" @input="update($event.target.value)">',
     directives: {
@@ -49,7 +38,6 @@ let app = new Vue({
 	methods: {
 		getAPOD() {
 			this.loading = true;
-			console.log(this.date, this.goodDate);
 			axios.get('https://api.nasa.gov/planetary/apod?date=' + this.goodDate + '&api_key=gmkr2JQnlSozUzaMAoEiS8JWdVz2RILzIAFMg0Aa')
 				.then(response => {
 					let results = "";
@@ -59,9 +47,10 @@ let app = new Vue({
 					document.getElementById("apodResult").innerHTML = results;
 					document.getElementById("apiTitle").setAttribute("style", "margin: 100px 0 10px 0;");
 					document.getElementById("apiExplanation").setAttribute("style", "margin: 10px 0 200px 0;");
+					let newDate = this.date.split('/');
+					this.dateNum = newDate[2] + newDate[0] + newDate[1];
 					this.date = '';
 					this.goodDate = '';
-					this.dateNum = '';
 					this.loading = false;
 					this.showAddComment = true;
 					return true;
@@ -89,10 +78,8 @@ let app = new Vue({
 	watch: {
 		date(value, oldvalue) {
 			if (value !== '') {
-				console.log(value);
 				let newDate = value.split('/');
 				this.goodDate = newDate[2] + '-' + newDate[0] + '-' + newDate[1];
-				this.dateNum = newDate[2] + newDate[0] + newDate[1];
 			}
 		}
 	}

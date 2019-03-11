@@ -51,3 +51,18 @@ html body footer a.link {
 #comments {
   margin-bottom: 100px;
 }
+
+button {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1em;
+}
+
+textarea {
+    width: 100%;
+    max-width: 500px;
+    height: 100px;
+}
+
+input {
+  margin-bottom: 5px !IMPORTANT;
+}

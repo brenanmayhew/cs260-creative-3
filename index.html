@@ -28,9 +28,9 @@
 	      <h3>Add a Comment</h3>
 				<form v-on:submit.prevent="addComment">
 					<input v-model="addedName" placeholder="Name"></input>
-					<textarea v-model="addedComment"></textarea>
-					<br />
 					<button type="submit">Comment</button>
+					<br />
+					<textarea v-model="addedComment"></textarea>
 				</form>
 				<div v-if="comments[dateNum]">
 					<h3>Comments</h3>
